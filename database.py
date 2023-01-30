@@ -14,5 +14,6 @@ def databaseFatch():
     con = sqlite3.connect('database.sqlite3')
     cur = con.cursor()
     result = cur.execute('SELECT * FROM informacoes').fetchall()
+    cur.execute("DROP TABLE informacoes")
     con.close()
     return result

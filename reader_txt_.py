@@ -2,7 +2,7 @@ from datetime import date, datetime
 from database import databaseConnect
 
 def read():
-    with open("CNAB.txt", encoding="UTF-8") as file:
+    with open("./temp/CNAB.txt", encoding="UTF-8") as file:
         for line in file:
             print("Tipo: ", line[0])
             x = line[1:9]
