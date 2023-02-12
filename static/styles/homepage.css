@@ -1,0 +1,44 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.TitleInfo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.BoxInput {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 1px 15px 25px -10px rgba(255, 255, 255, 0.25);
+}
+
+.FormInput {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 15px;
+}
+
+.InputFile {
+  /* display: none; */
+  display: flex;
+}
+
+.InputSubmit {
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

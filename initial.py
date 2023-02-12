@@ -8,7 +8,6 @@ UPLOAD_FOLDER = './temp'
 ALLOWED_EXTENSIONS = {'txt'}
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -22,8 +21,9 @@ def homepage():
 def upload_file():
    if request.method == 'POST':
       f = request.files['file']
-      f.save(os.path.join(app.config['UPLOAD_FOLDER'], "CNAB.txt"))
-      read()
+      temp = f.stream.read()
+      infos = temp.decode('utf-8')
+      read(infos)
       result = databaseFatch()
       return render_template("result.html", result=result)
 
